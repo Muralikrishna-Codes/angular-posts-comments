@@ -1,0 +1,10 @@
+<div class="post-container">
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.body }}</p>
+  <ul>
+    <p class='comment'*ngFor="let comment of comments">
+      {{ comment.body }}
+    </p>
+  </ul>
+  <app-comment-box (addComment)="addComment($event)"></app-comment-box>
+</div>
